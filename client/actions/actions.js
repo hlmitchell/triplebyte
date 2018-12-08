@@ -1,0 +1,1 @@
+export const updateMessage = type => ({ type });
