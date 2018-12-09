@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { updateMessage } from './actions/actions';
 import { UPDATE_MESSAGE } from './actions/constants';
+import './stylesheets/AppStyles.css';
 
 const mapStateToProps = store => ({
   message: store.AppReducer.message
@@ -18,7 +19,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className='container' >
         <div>{this.props.message}</div>
         <button onClick={this.props.updateMessage.bind(this)}>Update Message</button>
       </div>
